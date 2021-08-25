@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    text-align: center;
+    background-color: rgb(36, 35, 49);
+    color: aliceblue;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    }
+
+.main-heading{
+    
+    margin: 40px 20% 30px;
+}
+.title{
+    margin-bottom: 30px;
+    padding: 10px;
+}
+.search-show{
+    border-radius: 2rem;
+    border: none;
+    
+}
+#search-show{
+    border: none;
+}
+.btn{
+    border-radius: 2rem;
+       
+}
+
+.result{
+    padding:20px 10px;
+    margin: 10px 20;   
+}
+.card{
+    background: rgb(50, 50, 61);
+    font-weight: 300;
+}
+.card-title{
+    font-size: 1.5rem;
+    
+}
+.tag{
+    font-weight: 500;
+}
+.card:hover{
+    box-shadow: -1px 1px 10px -4px rgb(83, 83, 83);
+    -webkit-box-shadow: -1px 1px 10px -4px rgb(83, 83, 83);
+    -moz-box-shadow: -1px 1px 10px -4px rgb(83, 83, 83);
+    transition: .2s;
+    transform: scale(1.05);
+}
+
+textarea:hover, 
+input:hover, 
+textarea:active, 
+input:active, 
+textarea:focus, 
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
