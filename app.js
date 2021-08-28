@@ -30,7 +30,7 @@ function addShows(results) {
             if (result.show.image.medium) {
                 html +=
                     `<div class="col-sm-6 col-md-4 col-lg-3 result">
-                        <div class="card" >
+                        <div class="card h-100" >
                             <img src="${result.show.image.medium}" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title">${result.show.name}</h5>
