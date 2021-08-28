@@ -36,6 +36,10 @@ body{
 .card{
     background: rgb(50, 50, 61);
     font-weight: 300;
+    box-shadow: -1px 1px 10px -4px rgb(204, 199, 199);
+    -webkit-box-shadow: -1px 1px 10px -4px rgb(224, 213, 213);
+    -moz-box-shadow: -1px 1px 10px -4px rgb(218, 204, 204);
+  
 }
 .card-title{
     font-size: 1.5rem;
@@ -49,7 +53,7 @@ body{
     -webkit-box-shadow: -1px 1px 10px -4px rgb(83, 83, 83);
     -moz-box-shadow: -1px 1px 10px -4px rgb(83, 83, 83);
     transition: .2s;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 textarea:hover, 
