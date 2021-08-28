@@ -6,9 +6,27 @@ searchButton.addEventListener('click', async function (e) {
     const searchTerm = input.value;
     const config = { params: { q: searchTerm } }
     const res = await axios.get(`https://api.tvmaze.com/search/shows`, config)
+    addShows(res.data);
+    input.value = '';
+})
+document.addEventListener('keypress', async function (event) {
+    let keyPressed = event.key;
+    if (keyPressed === "Enter") {
+        const input = document.querySelector('.search-show');
+        const searchTerm = input.value;
+        const config = { params: { q: searchTerm } }
+        const res = await axios.get(`https://api.tvmaze.com/search/shows`, config)
+        addShows(res.data);
+        input.value = '';
+    }
+})
+
+
+
+function addShows(results) {
     let html = '';
-    if (res.data) {
-        for (result of res.data) {
+    if (results) {
+        for (result of results) {
             if (result.show.image.medium) {
                 html +=
                     `<div class="col-sm-6 col-md-4 col-lg-3 result">
@@ -27,8 +45,7 @@ searchButton.addEventListener('click', async function (e) {
             }
         }
     } else {
-        html = `<h2 class="text-primary">No Results</h2>`
+        html += `<h2 class="text-primary">No Results</h2>`;
     }
     row.innerHTML = html;
-    input.value = '';
-})
+}
